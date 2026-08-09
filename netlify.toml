@@ -1,15 +1,16 @@
 [build]
   command = "npm run build"
-  publish = "dist"
+  publish = ".output/public"
 
-# Single Page Application fallback for TanStack Router
+[build.environment]
+  NITRO_PRESET = "netlify"
+
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/renderer"
+  status = 200
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-  force = false
-
-[[headers]]
-  for = "/*"
-    [headers.values]
-    Cache-Control = "public, max-age=0, must-revalidate"
