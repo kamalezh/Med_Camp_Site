@@ -14,7 +14,8 @@ export default defineConfig({
   vite: {
     // Force Nitro to build specifically for Netlify Functions/Edge
     nitro: {
-      preset: "netlify",
+      // Build for Vercel so server output is compatible with Vercel runtime
+      preset: "vercel",
     },
   },
 });

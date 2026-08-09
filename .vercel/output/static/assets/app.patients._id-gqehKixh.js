@@ -1,0 +1,1 @@
+import{s as e,t}from"./link-DeJekEZs.js";var n=e(),r=()=>(0,n.jsxs)(`div`,{className:`p-8 text-center text-muted-foreground`,children:[`Patient not found. `,(0,n.jsx)(t,{to:`/app/patients`,className:`text-primary`,children:`Back`})]});export{r as notFoundComponent};

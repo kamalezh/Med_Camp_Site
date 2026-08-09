@@ -1,0 +1,1 @@
+import{s as e,t}from"./link-DeJekEZs.js";var n=e(),r=()=>(0,n.jsxs)(`div`,{className:`p-8 text-center text-muted-foreground`,children:[`Camp not found. `,(0,n.jsx)(t,{to:`/app/camps`,className:`text-primary`,children:`Back to camps`})]});export{r as notFoundComponent};
