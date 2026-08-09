@@ -1,16 +1,15 @@
 [build]
   command = "npm run build"
-  publish = ".output/public"
+  publish = "dist"
 
-[build.environment]
-  NITRO_PRESET = "netlify"
-
-[[redirects]]
-  from = "/*"
-  to = "/.netlify/functions/renderer"
-  status = 200
-
+# Enforce Netlify to pass all route handling to TanStack Client-Side Router
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  force = true
+
+[[headers]]
+  for = "/*"
+    [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"
